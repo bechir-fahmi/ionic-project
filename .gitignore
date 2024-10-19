@@ -1,0 +1,37 @@
+# Laravel
+/laravel-code/vendor
+/laravel-code/node_modules
+/laravel-code/public/hot
+/laravel-code/public/storage
+/laravel-code/storage/*.key
+/laravel-code/storage/logs/*
+/laravel-code/.env
+/laravel-code/.env.backup
+/laravel-code/.phpunit.result.cache
+/laravel-code/Homestead.json
+/laravel-code/Homestead.yaml
+/laravel-code/npm-debug.log
+/laravel-code/yarn-error.log
+
+# Ionic
+/ionic-code/node_modules
+/ionic-code/www
+/ionic-code/platforms
+/ionic-code/plugins
+/ionic-cod/.sourcemaps
+/ionic-cod/.ionic
+/ionic-cod/.sass-cache
+/ionic-cod/.versions
+/ionic-cod/.vscode
+/ionic-cod/*.log
+/ionic-cod/*.tmp
+/ionic-cod/*.tmp.*
+/ionic-cod/log.txt
+/ionic-cod/npm-debug.log*
+/ionic-cod/.DS_Store
+/ionic-cod/Thumbs.db
+/ionic-cod/UserInterfaceState.xcuserstate
+
+# General
+.DS_Store
+Thumbs.db
