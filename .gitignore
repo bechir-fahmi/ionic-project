@@ -1,5 +1,6 @@
 # Laravel
 /laravel-code/vendor
+/laravel-code/.angular
 /laravel-code/node_modules
 /laravel-code/public/hot
 /laravel-code/public/storage
@@ -23,6 +24,7 @@
 /ionic-cod/.sass-cache
 /ionic-cod/.versions
 /ionic-cod/.vscode
+/ionic-cod/.angular
 /ionic-cod/*.log
 /ionic-cod/*.tmp
 /ionic-cod/*.tmp.*
