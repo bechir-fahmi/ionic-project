@@ -24,9 +24,9 @@
 /ionic-cod/.sass-cache
 /ionic-cod/.versions
 /ionic-cod/.vscode
-/ionic-cod/.angular
-/ionic-cod/*.log
-/ionic-cod/*.tmp
+/ionic-code/.angular/
+/ionic-code/*.log
+/ionic-code/*.tmp
 /ionic-cod/*.tmp.*
 /ionic-cod/log.txt
 /ionic-cod/npm-debug.log*
