@@ -117,13 +117,13 @@ class GiftController extends Controller
 
             // Append your custom error message
             $errors->add('cover', 'Maximum file size to upload is 2MB (2048KB)');
-        
+
             // Return the response with the modified errors
             return response()->json(['errors' => $errors], 422);
         }
 
         $input = $request->all();
-            
+
         if($request->hasFile('cover'))
         {
             $filenameWithExt = $request->file('cover')->getClientOriginalName();

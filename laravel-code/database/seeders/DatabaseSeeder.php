@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Coupon;
+use App\Models\Gift;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,9 +17,9 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // User::factory()->create([
+        // ]);
+        // Gift::factory()->count(10)->create();
+        Coupon::factory()->count(10)->create();
     }
 }

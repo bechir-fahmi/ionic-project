@@ -30,7 +30,7 @@
         <ion-row>
           @for(item of order?.order_items; track i; let i = $index) {
             <ion-col size="12">
-              {{item?.name}} x {{ item?.quantity }}
+              <ion-text color="white">{{item?.name}} x {{ item?.quantity }}</ion-text>
             </ion-col>
           }
         </ion-row>

@@ -33,7 +33,7 @@ class UserController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|min:3|max:100',
             'email' => 'required|email',
-            'phone' => 'required|min:10|max:10',
+            'phone' => 'required|min:8|max:8',
             'password' => 'required|min:8'
         ]);
 
@@ -49,7 +49,7 @@ class UserController extends Controller
 
         if($query) {
             return response()->json([
-                'success' => 0, 
+                'success' => 0,
                 'message' => 'Account with same Email or Phone number already exists.'
             ], 401);
         }

@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Cart</ion-title>
+    <ion-title color="light">Cart</ion-title>
 
     <ion-buttons slot="start">
-      <ion-back-button [defaultHref]="previous"></ion-back-button>
+      <ion-back-button [defaultHref]="previous" color="light"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -12,11 +12,11 @@
   @if(model) {
 
   <ion-item lines="none" class="total-item">
-    <ion-label> {{model?.totalItem}} items in Cart </ion-label>
+    <ion-label color="light"> {{model?.totalItem}} items in Cart </ion-label>
     <ion-button
       fill="clear"
       slot="end"
-      color="danger"
+      color="light"
       size="small"
       (click)="cartService.clearCart()"
     >
@@ -31,10 +31,10 @@
         <ion-img [src]="imageBaseUrl + item?.cover"></ion-img>
       </ion-thumbnail>
 
-      <ion-label>
+      <ion-label color="light">
         <strong>{{item?.name}}</strong>
         <p class="price">
-          <ion-text color="dark">
+          <ion-text color="light">
             <span>{{cartService.currency}}</span
             ><strong>{{item?.price}}</strong>
           </ion-text>
@@ -49,7 +49,7 @@
         </ion-row>
 
         <ion-row class="quantity">
-          <ion-text>
+          <ion-text color="light">
             <strong>{{item?.quantity}}</strong>
           </ion-text>
         </ion-row>
@@ -74,28 +74,28 @@
     <ion-card>
       @if(!selectedCoupon) {
       <ion-item [detail]="true" class="offer" (click)="applyCoupon = true">
-        <ion-label> Apply Coupon </ion-label>
+        <ion-label color="light"> Apply Coupon </ion-label>
       </ion-item>
       } @else {
       <ion-item class="offer selected_coupon">
-        <ion-label>
+        <ion-label color="light">
           '{{selectedCoupon?.code}}' applied
           <p>
-            <ion-text color="success">
+            <ion-text color="light">
               <strong
                 >{{currency}}{{selectedCoupon?.saved | number: '0.2-2'}}</strong
               >
             </ion-text>
-            <ion-text class="coupon_text"> coupon savings </ion-text>
+            <ion-text class="coupon_text" color="light"> coupon savings </ion-text>
           </p>
         </ion-label>
         <ion-button
           fill="clear"
-          color="danger"
+          color="light"
           [strong]="true"
           (click)="removeCoupon()"
         >
-          <ion-text>Remove</ion-text>
+          <ion-text color="light">Remove</ion-text>
         </ion-button>
       </ion-item>
       }
@@ -105,21 +105,21 @@
   <!-- billing details -->
   <ion-list lines="none" class="billing">
     <ion-list-header>
-      <ion-label color="tertiary">Bill Details</ion-label>
+      <ion-label color="light">Bill Details</ion-label>
     </ion-list-header>
 
     <ion-item-group>
       <ion-item>
-        <ion-label color="dark">Item Total</ion-label>
-        <ion-text slot="end" color="dark">
+        <ion-label color="light">Item Total</ion-label>
+        <ion-text slot="end" color="light">
           {{cartService.currency}}{{model?.totalPrice | number: '0.2-2'}}
         </ion-text>
       </ion-item>
 
       @if(selectedCoupon) {
         <ion-item>
-          <ion-label color="dark">Item Discount</ion-label>
-          <ion-text slot="end" color="success"
+          <ion-label color="light">Item Discount</ion-label>
+          <ion-text slot="end" color="light"
             >- {{cartService.currency}}{{selectedCoupon?.saved | number:
             '0.2-2'}}</ion-text
           >
@@ -127,8 +127,8 @@
         } 
 
       <ion-item class="delivery-fee">
-        <ion-label color="dark"> Delivery fee </ion-label>
-        <ion-text slot="end" color="dark">
+        <ion-label color="light"> Delivery fee </ion-label>
+        <ion-text slot="end" color="light">
           {{cartService.currency}}{{model?.total_delivery_charge | number:
           '0.2-2'}}
         </ion-text>
@@ -136,16 +136,16 @@
       
       @if(model?.tax && model?.tax > 0) {
       <ion-item>
-        <ion-label color="dark">Taxes</ion-label>
-        <ion-text slot="end" color="dark"
+        <ion-label color="light">Taxes</ion-label>
+        <ion-text slot="end" color="light"
           >{{cartService.currency}}{{model?.tax | number: '0.2-2'}}</ion-text
         >
       </ion-item>
       }
 
       <ion-item class="dashedBorderTop">
-        <ion-label color="dark"><strong>To Pay</strong></ion-label>
-        <ion-text slot="end" color="dark">
+        <ion-label color="light"><strong>To Pay</strong></ion-label>
+        <ion-text slot="end" color="light">
           <strong
             >{{cartService.currency}}{{model?.grandTotal | number: '0.2-2'}}
           </strong>
@@ -157,13 +157,13 @@
   @if(address) {
     <ion-list lines="none" class="billing">
       <ion-list-header>
-        <ion-label color="dark">Shipping Details</ion-label>
+        <ion-label color="light">Shipping Details</ion-label>
       </ion-list-header>
 
       <ion-item-group>
         <ion-item>
-          <ion-icon slot="start" name="location-outline"></ion-icon>
-          <ion-label color="dark">
+          <ion-icon slot="start" name="location-outline" color="light"></ion-icon>
+          <ion-label color="light">
             {{ address?.save_as }}
             <p>
               <span>{{ address?.house_no }}, </span>
@@ -177,7 +177,7 @@
 
           <ion-button
             slot="end"
-            color="secondary"
+            color="light"
             size="small"
             fill="clear"
             (click)="isSelectAddress = true"
@@ -228,8 +228,8 @@
 
   } @else {
   <div class="empty-screen" [align]="'center'">
-    <ion-icon name="bag-handle-outline" color="primary"></ion-icon>
-    <p>No items available</p>
+    <ion-icon name="bag-handle-outline" color="light"></ion-icon>
+    <p color="light">No items available</p>
   </div>
   }
 </ion-content>
@@ -237,7 +237,7 @@
 @if(model) {
 <ion-footer>
   <ion-toolbar>
-    <ion-button expand="block" color="primary" mode="ios" (click)="checkout()">
+    <ion-button expand="block" color="light" mode="ios" (click)="checkout()">
       Checkout
     </ion-button>
   </ion-toolbar>

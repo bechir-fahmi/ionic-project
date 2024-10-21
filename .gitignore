@@ -25,6 +25,7 @@
 /ionic-cod/.versions
 /ionic-cod/.vscode
 /ionic-code/.angular/
+/ionic-code/.nx/
 /ionic-code/*.log
 /ionic-code/*.tmp
 /ionic-cod/*.tmp.*
